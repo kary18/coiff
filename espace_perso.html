@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<title>Espace Perso</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="scripts/jquery_3.3.1.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+		<link href="styles/espace_perso.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		<!--Modale compte perso-->
+		
+		<div id="bg-modale" class="bg-modale"></div>
+		
+		<div class="container modale" id="modale">
+
+			<!--Formulaire modif compte perso-->
+			<div class="modale-compte py-2">
+				<h2 class="text-center py-2">Mon Compte</h2>
+				
+				<form action="espace_perso.html">
+					
+					<input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="John Doe">
+					
+					<input type="email" class="form-control mb-2 mr-sm-2" id="inlineFormEmail" placeholder="johndoe@planetexpress.gal">				
+
+					<input type="password" class="form-control mb-2 mr-sm-2" id="inlineFormInputGroupPassword2" placeholder="xxxxxxx">
+					
+					<input type="password" class="form-control mb-2 mr-sm-2" id="inlineFormInputGroupPassword2" placeholder="xxxxxxx">
+					
+					<select id="inputState" class="form-control mb-2 mr-sm-2">
+						<option>Planète</option>
+						<option selected>Mars</option>
+					</select>
+					
+					<select id="inputState" class="form-control mb-2 mr-sm-2">
+						<option>Ville</option>
+						<option selected>Olympus</option>
+					</select>
+					
+					<input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputZipcode" placeholder="95000451">
+
+					<div class="form-check mb-2 mr-sm-2">
+						<input class="form-check-input" type="checkbox" id="inlineFormCheck">
+						<label class="form-check-label" for="inlineFormCheck">Etes-vous sûrs?</label>
+					</div>
+
+					<button type="submit" class="btn btn-primary mb-2">Modifier</button>
+				</form>
+				
+				<img class="modale-btn modale-fermeture" id="modale-fermeture" src="img/croix.png">
+			</div>
+			
+			<div class="container text-center">
+				<h5 class="text-center">Se déconnecter</h5>
+				<!--<input type="image" src="img/croix.png" class="btn-deconnexion">-->
+				<a href="index.html"><img src="img/croix.png" class="btn-deconnexion"></a>
+			</div>
+		</div>
+
+		<header class="container-fluid pt-3 header-decoration">
+		
+			<!--Titre et logo-->
+			<div class="container-fluid">
+				<div class="row align-items-end px-5 pt-3 header-titre">
+
+					<div class="col-12 py-4 text-center">
+						<h1 class="titre-header text-center">Espace <a href="index.html"><img class="logo-titre" src="img/logo_titre.png" alt="logo du site"></a> Meteo</h1>
+					</div>
+
+				</div>
+			</div>
+			
+			<!--Navigation-->
+			
+			
+				
+			
+	<div class="row justify-content-center px-5 pb-5 header-bottom">
+
+				<!--Barre de recherche-->
+		<section class="col-xl-6 col-sm-6 col-12 text-center pt-3">
+
+			<form class="flex-search">
+				<div class="bandeau-search pr-3 text-center">
+					<input class="form-control" type="search" placeholder="Planète, station, coorconnées">
+				</div>
+
+				<input type="image" src="img/logo_recherche.png" alt="" class="logo-header">
+
+			</form>
+
+		</section>
+
+				<!--Connexion-->
+		<section class="col-xl-6 col-sm-6 col-12 text-center pt-3">
+			<!--<div class="bandeau-login pr-3 text-right">
+
+								</div>-->
+			<img id="modale-ouverture" src="img/logo_login.png" alt="" class="logo-header">
+			<span><strong>BONJOUR John Doe</strong></span>
+
+
+		</section>
+	</div>
+			
+		</header>
+		
+	<main id="info-terre" class="container-fluid bg-planete px-0 info-terre">
+		<div class="container-fluid">			
+			<div class="row justify-content-start">
+
+			<div class=" col-xl-1 col-lg-1 col-md-2 col-sm-2 col-12 favoris">
+
+				<div class="row align-items-center justify-content-around">
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-terre" src="img/terre2.png" alt="" class="image-favoris">
+						<img src="img/croix.png" class="supression-favori">
+					</div>
+
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite">
+						<img id="btn-nav-venus" src="img/venus2.png" alt="" class="image-favoris">
+						<img src="img/croix.png" class="supression-favori">
+					</div>
+
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite">
+						<img id="btn-nav-titan" src="img/titan2.png" alt="" class="image-favoris">
+						<img src="img/croix.png" class="supression-favori">
+					</div>
+
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite">
+						<img id="btn-nav-mars" src="img/mars2.png" alt="" class="image-favoris">
+						<img src="img/croix.png" class="supression-favori">
+					</div>
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-12 text-center py-2"><img  src="img/plus_btn.png" alt="" class="ajout-favoris"></div>
+				</div>					
+			</div>
+					
+					
+					<!--Météo du jour-->
+			<section class="col-xl-3 col-md-4 col-sm-5 col-12 text-center p-5 info-generale-planete">
+				<h2>Vénus</h2>
+				<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo">
+				<h3 class="py-2">Station 15°C<br>Sol 457°C</h3>
+				<h4>Orage</h4>
+				<p>Pluies d'acide sulfurique.<br>Risque de tempête électromagnétique: surveillez vos appareils.</p>
+				<button type="button" class="btn btn-outline-dark btn-lg btn-block">Plus de détails</button>
+				<button type="button btn-lg btn-block" class="btn btn-outline-dark btn-lg btn-block">Météo jour par jour</button>
+			</section>
+			<!--Informations complémentaires-->
+			<section class="col-xl-3 col-md-4 col-sm-5 col-12 text-center p-5 info-generale-planete">
+				<h3>Informations détaillées</h3>
+				<p>Vénus possède une atmosphère extrêmement dense<br>, composée à 96,5% de dioxyde de carbone (CO2).<br>cette atmosphère génère un effet de serre colossal <br><br> à l'origine des températures extrêmes observées.L'atmosphère de Vénus est en état de super-rotation
+				La totalité de l'atmosphère accomplit une circonvolution de la planète en seulement quatre jours terrestres.
+				</p>
+
+				 <button type="button" class="btn btn-outline-dark btn-lg btn-block">Moins de détails</button>
+			</section>
+			<section class="col-xl-3 col-md-4 col-sm-5 col-12 text-center p-5 info-generale-planete">
+				<h3>Recherchez un lieu</h3>
+				<form action="espace_perso.html">
+					
+					<input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Coordonnées">
+					
+					<select id="inputState" class="form-control mb-2 mr-sm-2">
+						<option>Planète</option>
+						<option selected>Mars</option>
+						<option>Pluton</option>
+					</select>
+					
+					<select id="inputState" class="form-control mb-2 mr-sm-2">
+						<option>Station</option>
+						<option selected>Olympus</option>
+					</select>
+					
+					<input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputZipcode" placeholder="Code Postal">
+
+					<button type="submi" class="btn btn-outline-dark btn-lg btn-block">Ajouter</button>
+				</form>
+
+				 
+			</section>
+				</div>						
+					<!--Météo jour par jour-->
+			<div id="jour-par-jour" class="row py-3 justify-content-start jour-par-jour">
+					<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+						<h2>Gaz Carbonique</h2>
+						<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+						<p>Taux de CO2 80%</p>
+						<p>Sol 457°C</p>
+					</section>
+			
+					<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+						<h2>azote</h2>
+						<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+						<p>Amoniac 78%</p>
+						<p>atomes d'azote 80%</p>			
+					</section>
+
+					<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+						<h2> Monoxyde de Carbone</h2>
+						<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+						<p>Atome de carbonne 50%</p>
+						<p>Atome D'oxyigène</p>			
+					</section>
+
+					<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+						<h2>vapeur d'eau</h2>
+						<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+						<p>pression de vapeur saturante 5%</p>
+						<p>précision 180°C</p>			
+					</section>
+
+					<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+						<h2>nuages</h2>
+						<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+						<p>Cristaux de glace 20%</p>
+						<p>Aérosols 10%</p>			
+					</section>
+
+					<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+						<h2>Vent solaire</h2>
+						<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+						<p>1500 km par seconde</p>
+						<p>Atmosphère 200 km d'épaisseur</p>		
+					</section>					
+				</div>
+		</div>	
+	</main>
+		
+	<main id="info-venus" class="container-fluid bg-planete px-0 info-venus">
+		<div class="container-fluid">	
+
+			<div class="row justify-content-start">
+
+			<div class=" col-xl-1 col-lg-1 col-md-2 col-sm-2 col-12 favoris">
+
+
+				<div class="row align-items-center justify-content-around">
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite">
+						<img id="btn-nav-terre" src="img/terre2.png" alt="" class="image-favoris">
+						<img src="img/croix.png" class="supression-favori align-self-start ">
+					</div>
+
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite">
+						<img id="btn-nav-venus" src="img/venus2.png" alt="" class="image-favoris">
+						<img src="img/croix.png" class="supression-favori align-self-start ">
+					</div>
+
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-titan" src="img/titan2.png" alt="" class="image-favoris">
+						<img src="img/croix.png" class="supression-favori align-self-start ">
+					</div>
+
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-mars" src="img/mars2.png" alt="" class="image-favoris">
+						<img src="img/croix.png" class="supression-favori align-self-start ">
+					</div>
+
+					<div class="col-xl-12 col-md-12 col-sm-12 col-12 text-center py-2"><img  src="img/plus_btn.png" alt="" class="ajout-favoris"></div>
+				</div>				
+			</div>	
+
+				<!--Météo du jour-->
+				<section class="col-xl-3 col-md-4 col-sm-5 col-12 text-center p-5 info-generale-planete">
+					<h2>Vénus</h2>
+					<h3>Station THX-911</h3>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo">
+					<h3 class="py-2">Station 15°C<br>Sol 457°C</h3>
+					<h4>Orage</h4>
+					<p>Pluies d'acide sulfurique.<br>Risque de tempête électromagnétique: surveillez vos appareils.</p>
+					<button id="detail-ouverture" type="button" class="btn btn-outline-dark btn-lg btn-block">Plus de détails</button>
+					<button id="jour-par-jour-ouverture" type="button btn-lg btn-block" class="btn btn-outline-dark btn-lg btn-block">Météo jour par jour</button>
+				</section>
+
+
+				<!--Informations complémentaires-->
+				<section id="info-detail-planete" class="col-xl-3 col-md-4 col-sm-5 col-12 text-center p-5 info-detail-planete">
+					<h2>Vénus</h2>
+					<h3>Station THX-911</h3>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo">
+					<h3 class="py-2">Station 15°C<br>Sol 457°C</h3>
+					<h4>Orage</h4>
+					<p>Pluies d'acide sulfurique.<br>Risque de tempête électromagnétique: surveillez vos appareils.</p>
+					<button type="button" class="btn btn-outline-dark btn-lg btn-block">Plus de détails</button>
+					<button type="button" class="btn btn-outline-dark btn-lg btn-block">Météo jour par jour</button>
+				</section>
+
+			</div>				
+
+
+				<!--Météo jour par jour-->
+			<div id="jour-par-jour" class="row align-items-center py-3 justify-content-start jour-par-jour">
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 1</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 15°C</p>
+					<p>Sol 457°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 2</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 18°C</p>
+					<p>Sol 470°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 3</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 16°C</p>
+					<p>Sol 450°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 4</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 12°C</p>
+					<p>Sol 392°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 5</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 19°C</p>
+					<p>Sol 417°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 6</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 22°C</p>
+					<p>Sol 484°C</p>			
+				</section>
+
+
+			</div>
+		</div>
+	</main>
+		
+	<main id="info-mars" class="container-fluid bg-planete px-0 info-mars">
+		<div class="container-fluid">	
+			<div class="row justify-content-start">
+
+				<div class=" col-xl-1 col-lg-1 col-md-2 col-sm-2 col-12 favoris">
+
+
+					 <div class="row align-items-center justify-content-around">
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-terre" src="img/terre2.png" alt="" class="image-favoris">
+								<img src="img/croix.png" class="supression-favori align-self-start ">
+							</div>
+
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-venus" src="img/venus2.png" alt="" class="image-favoris">
+							<img src="img/croix.png" class="supression-favori align-self-start ">
+						</div>
+
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-titan" src="img/titan2.png" alt="" class="image-favoris">
+							<img src="img/croix.png" class="supression-favori align-self-start ">
+						</div>
+
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-mars" src="img/mars2.png" alt="" class="image-favoris">
+							<img src="img/croix.png" class="supression-favori align-self-start ">
+						</div>
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-12 text-center py-2"><img  src="img/plus_btn.png" alt="" class="ajout-favoris"></div>
+					</div>					
+				</div>
+
+
+				<!--Météo du jour-->
+				<section class="col-xl-3 col-md-4 col-sm-5 col-12 text-center p-5 info-generale-planete">
+					<h2>Mars</h2>
+					<h3>Station Ksümnole</h3>
+					<img src="img/logo_meteo_mars.png" alt="Orages éléctromagnétiques" class="logo-meteo">
+					<h3 class="py-2">Station 25°C<br>Sol 2°C</h3>
+					<h4>Tempête de sable</h4>
+					<p>Pluies d'acide sulfurique.<br>Risque de tempête électromagnétique: surveillez vos appareils.</p>
+					<button id="detail-ouverture" type="button" class="btn btn-outline-dark btn-lg btn-block">Plus de détails</button>
+					<button id="jour-par-jour-ouverture" type="button btn-lg btn-block" class="btn btn-outline-dark btn-lg btn-block">Météo jour par jour</button>
+				</section>
+
+
+				<!--Informations complémentaires-->
+				<section id="info-detail-planete" class="col-xl-3 col-md-4 col-sm-5 col-12 text-center p-5 info-detail-planete">
+					<h2>Vénus</h2>
+					<h3>Station THX-911</h3>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo">
+					<h3 class="py-2">Station 15°C<br>Sol 457°C</h3>
+					<h4>Orage</h4>
+					<p>Pluies d'acide sulfurique.<br>Risque de tempête électromagnétique: surveillez vos appareils.</p>
+					<button type="button" class="btn btn-outline-dark btn-lg btn-block">Plus de détails</button>
+					<button type="button" class="btn btn-outline-dark btn-lg btn-block">Météo jour par jour</button>
+				</section>
+
+			</div>				
+
+
+				<!--Météo jour par jour-->
+			<div id="jour-par-jour" class="row align-items-center py-3 justify-content-start jour-par-jour">
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 1</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 15°C</p>
+					<p>Sol 457°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 2</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 18°C</p>
+					<p>Sol 470°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 3</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 16°C</p>
+					<p>Sol 450°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 4</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 12°C</p>
+					<p>Sol 392°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 5</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 19°C</p>
+					<p>Sol 417°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 6</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 22°C</p>
+					<p>Sol 484°C</p>			
+				</section>
+
+
+			</div>
+		</div>
+	</main>
+
+	<main id="info-titan" class="container-fluid bg-planete px-0 info-titan">
+		
+		<div class="container-fluid">	
+			<div class="row justify-content-start">
+
+				<div class=" col-xl-1 col-lg-1 col-md-2 col-sm-2 col-12 favoris">
+
+
+					<div class="row align-items-center justify-content-around">
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-terre" src="img/terre2.png" alt="" class="image-favoris">
+								<img src="img/croix.png" class="supression-favori align-self-start ">
+							</div>
+
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-venus" src="img/venus2.png" alt="" class="image-favoris">
+							<img src="img/croix.png" class="supression-favori align-self-start ">
+						</div>
+
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-titan" src="img/titan2.png" alt="" class="image-favoris">
+							<img src="img/croix.png" class="supression-favori align-self-start ">
+						</div>
+
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-6 text-center py-2 favori-unite"><img id="btn-nav-mars" src="img/mars2.png" alt="" class="image-favoris">
+							<img src="img/croix.png" class="supression-favori align-self-start ">
+						</div>
+
+							<div class="col-xl-12 col-md-12 col-sm-12 col-12 text-center py-2"><img  src="img/plus_btn.png" alt="" class="ajout-favoris"></div>
+					</div>					
+				</div>
+
+
+				<!--Météo du jour-->
+				<section class="col-xl-3 col-md-4 col-sm-5 col-12 text-center p-5 info-generale-planete">
+					<h2>Vénus</h2>
+					<h3>Station THX-911</h3>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo">
+					<h3 class="py-2">Station 15°C<br>Sol 457°C</h3>
+					<h4>Orage</h4>
+					<p>Pluies d'acide sulfurique.<br>Risque de tempête électromagnétique: surveillez vos appareils.</p>
+					<button id="detail-ouverture" type="button" class="btn btn-outline-dark btn-lg btn-block">Plus de détails</button>
+					<button id="jour-par-jour-ouverture" type="button btn-lg btn-block" class="btn btn-outline-dark btn-lg btn-block">Météo jour par jour</button>
+				</section>
+
+
+				<!--Informations complémentaires-->
+				<section id="info-detail-planete" class="col-xl-3 col-md-4 col-sm-5 col-12 text-center p-5 info-detail-planete">
+					<h2>Vénus</h2>
+					<h3>Station THX-911</h3>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo">
+					<h3 class="py-2">Station 15°C<br>Sol 457°C</h3>
+					<h4>Orage</h4>
+					<p>Pluies d'acide sulfurique.<br>Risque de tempête électromagnétique: surveillez vos appareils.</p>
+					<button type="button" class="btn btn-outline-dark btn-lg btn-block">Plus de détails</button>
+					<button type="button" class="btn btn-outline-dark btn-lg btn-block">Météo jour par jour</button>
+				</section>
+
+			</div>				
+
+
+				<!--Météo jour par jour-->
+			<div id="jour-par-jour" class="row py-3 justify-content-start jour-par-jour">
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 1</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 15°C</p>
+					<p>Sol 457°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 2</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 18°C</p>
+					<p>Sol 470°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 3</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 16°C</p>
+					<p>Sol 450°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 4</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 12°C</p>
+					<p>Sol 392°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 5</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 19°C</p>
+					<p>Sol 417°C</p>			
+				</section>
+
+				<section class="col-xl-2 col-md-2 col-sm-4 col-4 text-center p-2 meteo-detail">
+					<h2>Jour 6</h2>
+					<img src="img/logo_meteo_venus.png" alt="Orages éléctromagnétiques" class="logo-meteo-mini pb-4">
+					<p>Station 22°C</p>
+					<p>Sol 484°C</p>			
+				</section>
+
+			</div>
+		</div>
+	</main>
+		
+		<footer  class="container-fluid">
+			
+			<div id="footer-top" class="row justify-content-center px-5 pt-5">
+			
+				<!--Liens vers autres sites-->
+
+				<ul class="col-xl-4 col-md-4 col-sm-6 col-12 pb-4">
+					<h2>Météo des mondes</h2>
+					<li><a>Météo terrienne</a></li>
+					<li><a>Météo marsienne</a></li>
+					<li><a>Météo vénusienne</a></li>
+					<li><a>Météo titanienne</a></li>
+				</ul>
+
+				<!--Liens téléchargement application-->
+
+				<div class="col-xl-4 col-md-4 col-sm-6 col-12 pb-4">
+					
+					<div class="row justify-content-center">
+						<h2>Téléchargez l'application</h2>
+					</div>
+					
+					<div class="row justify-content-center">
+						<div class="col-12 text-center">
+							<img class="bouton-store" src="img/bouton_googleplay.jpg" alt="googleplay">
+						</div>
+						<div class="col-12 text-center">
+							<img class="bouton-store" src="img/bouton_appstore.png" alt="appstore">
+						</div>
+					</div>
+					
+				</div>
+
+				<!--Liens réseaux sociaux-->
+
+				<div class="col-xl-4 col-md-4 col-sm-12 col-12 pb-4">
+					<h2>Suivez-nous</h2>
+					
+					<div class="flex-logo">
+						<a><img src="./img/logo_fb.png" alt="Facebook" class="rounded logo-social"></a>
+						<a><img src="./img/logo_tweeter.png" alt="Facebook" class="rounded logo-social"></a>
+						<a><img src="./img/logo_instagram.png" alt="Facebook" class="rounded logo-social"></a>
+					</div>
+				</div>
+				
+			</div>
+			
+			<!--Navigation-->
+			
+			<div id="nav-footer" class="row align-items-end">
+				
+				<ul class="col-12 nav justify-content-center align-self-end">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Mentions légales</a>
+					</li>
+					<li class="nav-item nav-borders">
+						<a class="nav-link" href="#">Foire aux questions</a>
+					</li>
+					<li class="nav-item nav-borders">
+						<a class="nav-link" href="#">Accessibilité</a>
+					</li>
+					<li class="nav-item nav-borders">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+					<li class="nav-item nav-borders">
+						<a class="nav-link" href="#">Plan du site</a>
+					</li>
+				</ul>
+				
+			</div>
+			
+			
+		</footer>
+	
+		<script src="scripts/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,375 @@
+/*ANIMATIONS*/
+
+@keyframes rotation-planete {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*GENERAL*/
+
+* {
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: AnjaliOldLipi;
+}
+
+a,
+p,
+span,
+h2 {
+  color: white;
+}
+
+a:hover,
+button:hover {
+  cursor: crosshair;
+}
+
+body {
+  /* background-image: url(../img/bg8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; */
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/*HEADER*/
+
+header {
+  margin: 0;
+  height: auto;
+  /*background: url(../img/espace.jpg);
+	background-size: cover;*/
+}
+
+.header-titre {
+  color: white;
+  height: auto;
+}
+
+.header-titre h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "DejaVu Sans Condensed";
+}
+
+.header-bottom {
+  /* height: 200px; */
+}
+
+.logo-titre {
+  width: 150px;
+  height: auto;
+}
+
+/*Navigation Bandeau vignettes*/
+
+.flex-vignettes-deck {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-vignette {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-header {
+  width: auto;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.img-header:hover {
+  cursor: crosshair;
+  animation: rotation-planete 6s linear infinite;
+}
+
+/*
+#modale-ouverture:hover, input.logo-header:hover {
+	filter: contrast(150);
+}
+*/
+
+.bandeau-vignette {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  z-index: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: translateX(-20px);
+}
+
+.logo-meteo-vignette {
+  width: 3em;
+  height: 3em;
+  margin: auto;
+}
+
+/*Searchbar*/
+
+.logo-header {
+  width: auto;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-header:hover {
+  cursor: crosshair;
+}
+
+.flex-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/*MODALE*/
+
+body {
+  position: relative;
+  z-index: 0;
+}
+
+.bg-modale {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modale-ouverture:hover {
+  cursor: crosshair;
+}
+
+.modale {
+  display: none;
+  position: absolute;
+  top: 3em;
+  right: 3em;
+  width: 250px;
+  z-index: 20;
+  padding: 2em 2em;
+  background-color: rgba(56, 70, 91, 0.93);
+}
+
+.modale-fermeture {
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  padding: 0.3em;
+}
+
+.modale-fermeture:hover {
+  cursor: crosshair;
+}
+
+.modale-btn {
+  width: 2em;
+  height: 2em;
+}
+
+.modale-connexion {
+  border-bottom: 1px dashed white;
+}
+
+/*#modale-translate {
+	position: absolute;
+	top: 3em;
+	bottom: 3em;
+	right: -20em;
+	
+	transition-duration: 1500ms;
+	
+	transition-property: position;
+
+	transition-timing-function: ease-in-out;
+}*/
+
+/*MAIN*/
+
+main {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  height: auto;
+  box-shadow: 0px 0px 30px 0px white;
+}
+
+.info-generale-planete h2,
+.info-detail-planete h2 {
+  color: black;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "DejaVu Sans Condensed";
+}
+
+.info-detail-planete h3 {
+  font-family: "DejaVu Sans Condensed";
+  color: black;
+  text-transform: uppercase;
+  padding-top: 3em;
+  padding-bottom: 1em;
+}
+
+main p {
+  color: black;
+}
+
+.logo-meteo {
+  width: 110px;
+  height: 80px;
+}
+
+.logo-meteo-mini {
+  width: 60px;
+  height: 50px;
+}
+
+.info-generale-planete,
+.info-detail-planete,
+.jour-par-jour {
+  background-color: rgba(200, 200, 200, 0.75);
+}
+
+.jour-par-jour section + section {
+  border-left: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.info-detail-planete {
+  display: none;
+  /*position: relative;
+	z-index: 0*/
+  /*height: 350px;*/
+}
+
+.info-venus,
+.info-titan,
+.info-mars {
+  display: none;
+}
+
+.info-terre {
+  background: url(../img/bg_terre.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.info-venus {
+  background: url(../img/bg_venus.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+.info-mars {
+  background: url(../img/bg_mars.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.info-titan {
+  background: url(../img/bg_titan.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+/*FOOTER*/
+
+/*Conteneurs*/
+
+footer {
+  margin: 0;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#footer-top {
+  height: auto;
+}
+
+#nav-footer {
+  height: auto;
+}
+
+/*Font styles*/
+
+footer h2 {
+  font-family: "DejaVu Sans Condensed";
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+footer li {
+  color: white;
+  text-align: center;
+  list-style-type: none;
+}
+
+footer li:hover {
+  color: dodgerblue;
+}
+
+/*Nav & logos & boutons*/
+
+.logo-social {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  text-align: center;
+}
+
+.logo-social:hover {
+  cursor: crosshair;
+  transform: scale(1.1);
+}
+
+.bouton-store {
+  width: 120px;
+  height: 45px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.flex-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.bouton-store:hover {
+  cursor: crosshair;
+  transform: scale(1.05);
+}
+
+.nav-borders {
+  /*border-left: 1px solid white;*/
+}
+body {
+  background-image: url(../img/bg8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
